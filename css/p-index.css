@@ -269,7 +269,6 @@ General Landing styles
     .content-left .benefits__list {
       margin-left: 9px; } }
   .content-left .benefits__item {
-    background-position: 0 50%;
     background-repeat: no-repeat;
     background-size: auto;
     font-weight: 700;
@@ -278,12 +277,14 @@ General Landing styles
     animation: opacityItem 0.25s cubic-bezier(0.25, 0.45, 0.45, 0.95) both; }
     @media screen and (max-width: 1199px) {
       .content-left .benefits__item {
+        background-position: 0 4px;
         font-size: 1.125rem;
-        padding: .7vh 0 .7vh 32px; } }
+        padding: 5px 0 5px 32px; } }
     @media screen and (min-width: 1200px) {
       .content-left .benefits__item {
+        background-position: 0 9px;
         font-size: 1.25rem;
-        padding: 1.1vh 0 1.1vh 34px; } }
+        padding: 7px 0 7px 34px; } }
 @-webkit-keyframes opacityItem {
   0% {
     opacity: 0;
@@ -390,7 +391,7 @@ General Landing styles
   opacity: 0;
   -webkit-animation: scaleOut 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95) both;
   animation: scaleOut 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95) both;
-  animation-delay: 2s; }
+  animation-delay: 1.7s; }
   @media screen and (max-width: 767px) {
     .content-right {
       margin: 30px auto 25px;

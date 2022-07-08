@@ -273,18 +273,19 @@ General Landing styles
     }
   }
   .benefits__item {
-    background-position: 0 50%;
     background-repeat: no-repeat;
     background-size: auto;
     font-weight: $font-weight-bolder;
 
     @include media-netbook-mx {
+      background-position: 0 4px;
       font-size: 1.125rem; //18px
-      padding: .7vh 0 .7vh 32px;
+      padding: 5px 0 5px 32px;
     }
     @include media-netbook-mn {
+      background-position: 0 9px;
       font-size: 1.25rem; //20px
-      padding: 1.1vh 0 1.1vh 34px;
+      padding: 7px 0 7px 34px;
     }
 
     // Animation
@@ -451,7 +452,7 @@ General Landing styles
   opacity: 0;
   -webkit-animation: scaleOut .5s $transition-timing-function both;
   animation: scaleOut .5s $transition-timing-function both;
-  animation-delay: 2s;
+  animation-delay: 1.7s;
   @-webkit-keyframes scaleOut {
     0% { opacity: 0; transform: scale(0.9); }
     70% { transform: scale(1.05); }

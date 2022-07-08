@@ -14,7 +14,6 @@ Footer elements
   }
 
   .content-box {
-    padding: 4vh 0 3vh;
     display: grid;
     gap: 25px;
     transition: all $transition-duration $transition-timing-function;
@@ -25,8 +24,12 @@ Footer elements
     @media only screen and (min-width: 471px) {
       grid-template-columns: 1fr 1fr;
     }
+    @include media-phablet-mx {
+      padding: 4vh 0 0;
+    }
     @include media-phablet-mn {
       grid-template-columns: 1fr 1fr 1fr;
+      padding: 4vh 0 3vh;
     }
     @include media-tablet-v-mn {
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -103,23 +106,31 @@ Footer elements
   padding: 12px 0 15px;
 
   .nav {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin: 0 auto;
-    max-width: 850px;
+    text-align: center;
+
+    @include media-phone-mn {
+      display: flex;
+      align-items: center;
+    }
+    @include media-tablet-v-mn {
+      max-width: 850px;
+    }
   }
 
   .nav__link {
     color: #fff;
     font-size: 0.813rem; //13px
     font-weight: $font-weight-medium;
+    margin: 0 auto;
     padding: 5px;
-    text-align: center;
 
     @include media-phone-mx {
-      flex-grow: 1;
+      display: block;
+      width: max-content;
+    }
+    @include media-phone-phablet {
+      width: 30%;
     }
 
     &:hover {

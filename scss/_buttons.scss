@@ -1,0 +1,86 @@
+/*
+Buttons
+*/
+
+.btn,
+button {
+  border: 0 none;
+  border-radius: var(--bdrs);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: $font-weight-bolder;
+  outline: none;
+  margin: 0 auto;
+  min-height: 57px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  transition: all $transition-duration-fast $transition-timing-function;
+
+  @media only screen and (min-width: 300px) {
+    white-space: nowrap;
+  }
+
+  &:hover {
+    border: 0 none;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.btn--primary {
+    background: $color-blue; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, $color-blue 0%, #4E76C4 100%); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, $color-blue 0%, #4E76C4 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    mix-blend-mode: normal;
+    box-shadow: 0 4px 40px rgba(35, 59, 104, 0.2);
+
+    &:after {
+      content: '';
+      background: -webkit-linear-gradient(to right, #4E76C4 0%, $color-blue 100%); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #4E76C4 0%, $color-blue 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      border-radius: var(--bdrs);
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: all $transition-duration-fast $transition-timing-function;
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:hover {
+      box-shadow: none;
+
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    @include media-phone-mx {
+      font-size: 1.188rem; //19px
+    }
+    @include media-phone-mn {
+      font-size: 1.313rem; //21px
+    }
+  }
+
+  &.btn--empty {
+    color: $color-blue;
+
+    &:hover {
+      color: $color-blue-dark;
+    }
+  }
+}

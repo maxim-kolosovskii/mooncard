@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" /><![endif]-->
+    <title>Mooncard</title>
+    <meta name="description" content="Landing page of Mooncard.">
+    <meta name="author" content="Mooncard">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS styles -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/p-index.css" />
+</head>
+
+<body class="body page">
+
+<header class="header">
+    <div class="container">
+        <a class="logo logo--conseils" href="#" target="_blank"><img src="./img/logo-conseils2pros-min.svg" alt="Conseils 2 Pros" /></a>
+        <a class="logo logo--mooncard" href="https://www.mooncard.co/" target="_blank"><img src="./img/logo-mooncard-min.svg" alt="Mooncard" /></a>
+    </div>
+</header>
+
+<main class="main">
+    <article>
+        <section class="section section--top">
+            <div class="content-curtain-outer">
+                <div class="content-curtain"><div></div></div>
+            </div>
+
+            <div class="container content-box">
+                <div class="content-left">
+                    <span class="page-pretitle">MOONCARD</span>
+                    <h1 class="page-title">La solution complète de paiement pour l'entreprise</h1>
+
+                    <div class="benefits">
+                        <img class="benefits__img" src="./img/top-card-miles-min.png" alt="">
+
+                        <ul class="benefits__list">
+                            <li class="benefits__item benefits__item--app">Une application de gestion</li>
+                            <li class="benefits__item benefits__item--integration">Une intégration comptable</li>
+                            <li class="benefits__item benefits__item--miles">Des Miles Flying Blue à chaque achat</li>
+                            <li class="benefits__item benefits__item--securite">La sécurité avec Allianz</li>
+                        </ul>
+                    </div>
+
+                    <div class="company">
+                        <a class="company__img company__img--vinci" href="https://www.vinci.com/vinci.nsf/fr/index.htm" target="_blank">
+                            <span>Vinci</span>
+                        </a>
+                        <a class="company__img company__img--airfrance" href="https://wwws.airfrance.fr/" target="_blank">
+                            <span>AirFrance</span>
+                        </a>
+                        <a class="company__img company__img--indigo" href="https://www.group-indigo.com/fr/le-groupe/" target="_blank">
+                            <span>Groupe Indigo</span>
+                        </a>
+                        <a class="company__img company__img--allianz" href="https://www.allianz.com/en.html" target="_blank">
+                            <span>Allianz</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="content-right">
+                    <div class="i-phone"></div>
+                    <h2 class="content-right__title">Réservez votre <span class="nowrap">démo !</span></h2>
+                    <p class="content-right__txt">Un expert Mooncard répondra à toutes vos questions.</p>
+                    <form class="form" action="">
+                        <fieldset class="form__group-reverse">
+                            <input type="email" class="form__control" id="form-email" name="email" placeholder="">
+                            <label class="form__label" for="form-email">Email professionnel</label>
+                        </fieldset>
+                        <fieldset class="form__group-half-outer">
+                            <div class="form__group-reverse form__group-half">
+                                <input type="text" class="form__control" id="form-prenom" name="prenom" placeholder="">
+                                <label class="form__label" for="form-prenom">Prénom</label>
+                            </div>
+                            <div class="form__group-reverse form__group-half">
+                                <input type="text" class="form__control" id="form-nom" name="nom" placeholder="">
+                                <label class="form__label" for="form-nom">Nom</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form__group-half-outer">
+                            <div class="form__group-reverse form__group-half">
+                                <input type="tel" class="form__control" id="form-phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="">
+                                <label class="form__label" for="form-phone">Téléphone mobile</label>
+                            </div>
+                            <div class="form__group-reverse form__group-half">
+                                <input type="text" class="form__control" id="form-societe" name="societe" placeholder="">
+                                <label class="form__label" for="form-societe">Société</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form__group-select form__group-reverse custom-select">
+                            <select id="form-collaborateurs">
+                                <option>0 - 10</option>
+                                <option>0 - 50</option>
+                                <option>0 - 100</option>
+                                <option>0 - 500</option>
+                                <option>0 - 1000</option>
+                            </select>
+                            <label class="form__label" for="form-collaborateurs">Collaborateurs</label>
+                        </fieldset>
+
+                        <label class="form__checkbox" for="moon-checkbox">
+                            <input type="checkbox" id="moon-checkbox">
+                            <span>J'accepte de recevoir d'autres communications de Mooncard. Nous n'utiliserons vos données personnelles que pour prendre contact avec vous et vous envoyez des informations commerciales. Consultez notre <a href="">Politique de confidentialité</a> pour en savoir plus ainsi que nos <a href="">modalités de désabonnement</a>.*</span>
+                        </label>
+
+                        <div class="btn-outer">
+                            <input class="btn btn--primary" id="" type="button" value="Prendre rendez-vous">
+                        </div>
+
+                        <a class="btn btn--empty btn--icon" href=""><span>&nbsp;</span> Offre réservée aux entreprises</a>
+                    </form>
+                </div>
+            </div>
+
+            <div class="content-bottom">
+                <div class="container">
+                    <div class="content-bottom__outer">
+                        <p class="content-bottom__txt content-bottom__txt--card">
+                            Une carte de paiement entreprise pour faciliter les dépenses professionnelles
+                        </p>
+                        <p class="content-bottom__txt content-bottom__txt--paiement">
+                            Un paiement, une photo et vos dépenses sont envoyées en comptabilité
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section><!-- end top section -->
+
+        <section class="section section--demo">
+            <div class="container">
+                <h1 class="section__title">Mooncard, Une solution pour...</h1>
+
+                <div class="demo">
+                    <div class="demo__item">
+                        <div class="demo__pic">
+                            <img class="demo__img" src="./img/demo-finir-min.png" alt="">
+                            <div class="demo__icon">
+                                <img class="lazy-img" data-src="./img/i-note-min.svg" alt="">
+                            </div>
+                        </div>
+                        <h2 class="demo__title">En finir avec les notes<br> de frais</h2>
+                        <p class="demo__txt">Libérez-vous de la charge mentale et administrative des notes de frais.</p>
+                        <p class="demo__txt">Avec Mooncard, vous n'avez qu'à payer et à prendre en photo votre justificatif : plus besoin de note de frais, les informations et approbations sont générées automatiquement.</p>
+                    </div>
+                    <div class="demo__item">
+                        <div class="demo__pic">
+                            <img class="demo__img" src="./img/demo-gerer-min.png" alt="">
+                            <div class="demo__icon">
+                                <img class="lazy-img" data-src="./img/i-transport-min.svg" alt="">
+                            </div>
+                        </div>
+                        <h2 class="demo__title">Gérer vos dépenses en<br> déplacement professionnel</h2>
+                        <p class="demo__txt">Mooncard couvre l'ensemble de vos dépenses professionnelles partout dans le monde.</p>
+                        <p class="demo__txt">Suivi en temps réel des dépenses, notes de frais pré-remplies et validation de votre manager.</p>
+                        <p class="demo__txt">Mooncard Corporate offre une solution sécurisée et personalisable, vous assurant des déplacements pro en toute sérénité.</p>
+                    </div>
+                    <div class="demo__item">
+                        <div class="demo__pic">
+                            <img class="demo__img" src="./img/demo-recuperer-min.png" alt="">
+                            <div class="demo__icon">
+                                <img class="lazy-img" data-src="./img/i-percent-min.svg" alt="">
+                            </div>
+                        </div>
+                        <h2 class="demo__title">Récupérer la TVA<br> facilement</h2>
+                        <p class="demo__txt">Mooncard simplifie la récupération de la TVA sur vos dépenses professionnelles.</p>
+                        <p class="demo__txt">À chaque dépense, la part de TVA récupérable est calculée.</p>
+                        <p class="demo__txt">À tout moment, il est possible de visualiser et d'exporter les dépenses réalisées avec leurs justificatifs afin de faciliter votre déclaration.</p>
+                    </div>
+                </div>
+
+                <a class="btn btn--primary" href="" target="_blank">
+                    <span>Demandez une démo</span>
+                </a>
+            </div>
+        </section><!-- end demo section -->
+
+        <section class="section section--partenaires">
+            <div class="container">
+                <h1 class="section__title">Les partenaires mooncard</h1>
+
+                <div class="slider">
+                    <div class="slider__item">
+                        <picture class="slider__img">
+                            <img class="lazy-img" data-src="./img/logo-flying-blue-min.svg" alt="Flying blue for me" width="90" height="90">
+                        </picture>
+                        <p class="slider__txt">
+                            Avec <span>Flying blue, chaque euro</span> dépensé vous fait <span>cumuler des Miles</span> qui s’ajoutent à ceux de votre compte Flying Blue personnel.
+                        </p>
+                    </div>
+                    <div class="slider__item">
+                        <picture class="slider__img">
+                            <img class="lazy-img" data-src="./img/logo-visa-min.svg" alt="Visa" width="132" height="42">
+                        </picture>
+                        <p class="slider__txt">
+                            <span>VISA</span> vous offre la possibilité <span>de payer</span> dans <span>plus de 200 pays</span> et territoires <span>partout dans le monde.</span>
+                        </p>
+                    </div>
+                    <div class="slider__item">
+                        <picture class="slider__img">
+                            <img class="lazy-img" data-src="./img/logo-allianz-min.svg" alt="Allianz" width="154" height="40">
+                        </picture>
+                        <p class="slider__txt">
+                            <span>Allianz</span> vous propose, en voyage et au quotidien des <span>garanties d’assurance, d’assistance et de protection juridique.</span>
+                        </p>
+                    </div>
+                    <div class="slider__item">
+                        <picture class="slider__img">
+                            <img class="lazy-img" data-src="./img/logo-virtuo-min.svg" alt="Virtuo" width="215" height="34">
+                        </picture>
+                        <p class="slider__txt">
+                            <span>VIRTUO</span>, la solution pour tous vos <span>déplacements. Conducteurs</span> additionnels inclus, <span>annulation et modification gratuite</span> et choix parmi des <span>voitures iconiques</span>, <span class="nowrap">tout est prévu !</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section><!-- end partenaires section -->
+    </article>
+</main>
+
+<footer class="footer">
+    <header class="header">
+        <div class="container">
+            <a class="logo logo--conseils" href="#" target="_blank"><img src="./img/logo-conseils2pros-min.svg" alt="Conseils 2 Pros" /></a>
+            <a class="logo logo--mooncard" href="https://www.mooncard.co/" target="_blank"><img src="./img/logo-mooncard-min.svg" alt="Mooncard" /></a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content-box">
+            <section class="footer__col footer__col--client">
+                <h1 class="footer__title lazy">Devenir client</h1>
+                <nav class="nav">
+                    <a class="nav__link" target="_blank" href="https://www.mooncard.co/fr/reserver-une-demo">Réserver une démo</a>
+                    <a class="nav__link" target="_blank" href="https://success.mooncard.co/s/?language=fr">F.A.Q</a>
+                    <a class="nav__link" target="_blank" href="https://www.mooncard.co/hubfs/CG/CGS_Mooncard_2022/CGS-Mooncard-france-040422.pdf">Conditions Générales de Services Mooncard</a>
+                </nav>
+            </section>
+            <section class="footer__col footer__col--info">
+                <h1 class="footer__title lazy">Informations</h1>
+                <nav class="nav">
+                    <a class="nav__link" target="_blank" href="https://developers.mooncard.co/developers/sign_in">API Mooncard</a>
+                    <a class="nav__link" target="_blank" href="https://www.mooncard.co/fr/tarifs">Tarifs</a>
+                    <a class="nav__link" target="_blank" href="https://www.mooncard.co/fr/a-propos">À propos</a>
+                    <a class="nav__link" target="_blank" href="https://www.welcometothejungle.com/fr/companies/mooncard/jobs">Nous rejoindre</a>
+                </nav>
+            </section>
+            <section class="footer__col footer__col--suivez">
+                <h1 class="footer__title lazy">Suivez-nous</h1>
+                <nav class="nav">
+                    <a class="nav__link" target="_blank" href="https://www.linkedin.com/company/mooncard">Linkedin</a>
+                    <a class="nav__link" target="_blank" href="https://www.facebook.com/mooncard.co/">Facebook</a>
+                    <a class="nav__link" target="_blank" href="https://twitter.com/@mooncard_co">Twitter</a>
+                    <a class="nav__link" target="_blank" href="https://www.youtube.com/channel/UC8awUKj3XV82QTplYRBdCLA">Youtube</a>
+                </nav>
+            </section>
+            <section class="footer__col footer__col--contactez">
+                <h1 class="footer__title lazy">Contactez-nous</h1>
+                <nav class="nav">
+                    <a class="nav__link nav__link--blue" href="mailto:hello@mooncard.co">hello@mooncard.co</a>
+                    <span class="nav__link">+33 1 79 75 11 91</span>
+                    <span class="nav__link">48 Rue Taitbout <br>75009 Paris – France</span>
+                </nav>
+            </section>
+            <section class="footer__col footer__col--application">
+                <h1 class="footer__title lazy">L’application</h1>
+                <nav class="nav">
+                    <a class="nav__link" href="https://play.google.com/store/games">
+                        <img src="./img/footer-appstore-min.png" alt="I'App Store" width="165" height="52" />
+                    </a>
+                    <a class="nav__link" href="https://www.apple.com/by/app-store/">
+                        <img src="./img/footer-googleplay-min.png" alt="Google Play" width="176" height="52" />
+                    </a>
+                </nav>
+            </section>
+        </div>
+
+        <div class="footer__nav-bottom">
+            <nav class="nav">
+                <a class="nav__link" href="#">Politiques de cookies</a>
+                <a class="nav__link" href="#">Politiques de confidentialité</a>
+                <a class="nav__link" href="#">Mentions légales et utilisation du site</a>
+            </nav>
+        </div>
+
+        <div class="footer__copy">
+            <p>La carte Mooncard est émise par Paynovate SA sous licence de Visa International Incorporated. Paynovate SA est un émetteur de monnaie réglementé par la Banque Nationale de Belgique et titulaire d'un passeport dans tous les pays européens. Paynovate SA est enregistrée auprès de la Banque-Carrefour des Entreprises sous le numéro BE0506 763 929. Paynovate SA est un membre principal de Visa. Visa et la marque Visa sont des marques déposées de Visa International Incorporated.</p>
+            <p>Le site www.mooncard.co est édité par la société Moongroup SAS au capital de 204.786 €, dont le siège se situe 68 rue du Faubourg Saint-Honoré 75008 Paris, RCS Paris 818 620 783. La société est enregistrée par l'Autorité de Contrôle Prudentiel et de Résolution (ACPR), sous le numéro 89380, enregistrement consultable dans le Registre des agents financiers (www.regafi.fr) en tant qu'agent de services de paiement de l'établissement de monnaie électronique Treezor (numéro CIB 16798), dont le siège social est situé 41 rue de Prony 75017 Paris.</p>
+        </div>
+    </div>
+</footer>
+
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+<!-- Background Images Lazy Loading -->
+<script defer src="js/lazy.js"></script>
+
+<!-- Custom Select -->
+<script defer src="js/custom_select.js"></script>
+</body>
+</html>

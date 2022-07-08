@@ -393,7 +393,7 @@ General Landing styles
   animation-delay: 2s; }
   @media screen and (max-width: 767px) {
     .content-right {
-      margin: 3vh auto 25px;
+      margin: 30px auto 25px;
       padding: 60px 30px 24px;
       position: relative; } }
   @media screen and (max-width: 575px) {

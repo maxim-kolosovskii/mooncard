@@ -69,8 +69,9 @@ Footer elements
     color: #fff;
     display: block;
     font-weight: $font-weight-medium;
-    padding: .8vh 0;
+    max-width: max-content;
     line-height: 1.4;
+    padding: 7px 0;
   }
   .nav__link--blue {
     color: $color-blue;
@@ -81,6 +82,10 @@ Footer elements
   }
   a:hover {
     color: $color-blue;
+  }
+
+  img {
+    display: block;
   }
 }
 .footer__col--client .footer__title {
@@ -102,8 +107,14 @@ Footer elements
 .footer__nav-bottom {
   border-top: 1px solid $color-blue-dark;
   border-bottom: 1px solid $color-blue-dark;
-  margin: 0 0 4vh;
-  padding: 12px 0 15px;
+  padding: 11px 0 13px;
+
+  @include media-phablet-mx {
+    margin-bottom: 3vh;
+  }
+  @include media-phablet-mn {
+    margin-bottom: 4vh;
+  }
 
   .nav {
     margin: 0 auto;
@@ -123,10 +134,15 @@ Footer elements
     font-size: 0.813rem; //13px
     font-weight: $font-weight-medium;
     margin: 0 auto;
-    padding: 5px;
 
     @include media-phone-mx {
       display: block;
+      padding: 10px;
+      width: max-content;
+    }
+    @include media-phone-mn {
+      display: block;
+      padding: 8px;
       width: max-content;
     }
     @include media-phone-phablet {

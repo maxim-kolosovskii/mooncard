@@ -31,12 +31,14 @@
   width: 100%;
 
   &:focus {
+    border: 1px solid #d0d0d0;
     box-shadow: none;
     color: $color-black;
     outline: none;
   }
 }
 .select-selected.select-arrow-active {
+  border: 1px solid #bcbcbc;
   border-radius: var(--bdrs) var(--bdrs) 0 0;
 }
 
@@ -59,7 +61,7 @@
 /* Style items (options): */
 .select-items {
   background-color: #fff;
-  border: 1px solid #dfdfdf;
+  border: 1px solid #bcbcbc;
   border-radius: 0 0 var(--bdrs) var(--bdrs);
   box-sizing: border-box;
   max-height: 10rem;

@@ -39,27 +39,18 @@ fieldset {
 }
 
 .form__group-select {
+  position: relative;
+  z-index: 2;
 
   .form__control {
     background: url("../img/i-arrow-min.svg") 95% 50% no-repeat;
   }
 }
 
-.form__label {
-  font-family: $font-family-accent;
-  font-size: 0.875rem; //14px
-  font-weight: $font-weight-base;
-  padding-left: 1rem;
-  transform: translateY(2.2rem);
-  transform-origin: left top;
-  cursor: text;
-  transition: all $transition-duration-fast $transition-timing-function;
-}
 
-.form__group input,
 .form__control,
 textarea {
-  background: #fff;
+  background-color: #fff;
   border: 1px solid #dfdfdf;
   border-radius: var(--bdrs);
   box-sizing: border-box;
@@ -71,24 +62,35 @@ textarea {
   outline: none;
   padding: 1.55rem 1rem .45rem;
   width: 100%;
+  transition: all 0.25s ease;
 
-  &:focus,
-  &:not(:placeholder-shown) {
-    box-shadow: none;
+  &:focus {
+    border: 1px solid #bcbcbc;
+    color: $color-black;
     outline: none;
   }
 
-  &:focus {
-    color: $color-black;
+  &:focus, &:not(:placeholder-shown), &:-webkit-autofill {
+    &+label {
+      color: #8e8e8e;
+      padding-left: 1.5rem;
+      transform: translateY(1.6rem) scale(0.7);
+    }
   }
 }
 
-.form__control:focus ~ .form__label,
-.form__control:not(:placeholder-shown) ~ .form__label {
-  color: #8e8e8e;
-  padding-left: 1.5rem;
-  transform: translateY(1.6rem) scale(0.7);
+.form__label {
+  cursor: text;
+  font-family: $font-family-accent;
+  font-size: 0.875rem; //14px
+  font-weight: $font-weight-base;
+  padding-left: 1rem;
+  pointer-events: none;
+  transform: translateY(2.2rem);
+  transform-origin: left top;
+  transition: all $transition-duration-fast $transition-timing-function;
 }
+
 
 /* Checkbox */
 .form__checkbox {
@@ -98,8 +100,36 @@ textarea {
 }
 
 input[type="checkbox"] {
-  max-width: 20px;
-  margin: 0 10px 0 0;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 30px;
+  margin: 0 10px 0 1px;
+  max-width: 30px;
+  width: calc(100% - 2px);
+  position: relative;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  transition: all $transition-duration-fast $transition-timing-function;
+}
+input[type="checkbox"]:hover {
+}
+
+input[type="checkbox"]:checked {
+  border: 1px solid #bcbcbc;
+}
+input[type="checkbox"]:checked:after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  width: 7px;
+  height: 12px;
+  border: solid $color-black;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .form__checkbox span {
@@ -115,6 +145,7 @@ input[type="checkbox"] {
     text-decoration: none;
   }
 }
+
 
 /* Select */
 @import "select";

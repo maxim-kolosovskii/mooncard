@@ -108,7 +108,7 @@ General Landing styles
     // Animation
     -webkit-animation: slideCurtain1 .5s $transition-timing-function both;
     animation: slideCurtain1 .5s $transition-timing-function both;
-    animation-delay: 1.1s;
+    animation-delay: .7s;
     @-webkit-keyframes slideCurtain1 {
       0% { transform: translateY(-200px); }
       100% { transform: translateY(0); }
@@ -450,9 +450,9 @@ General Landing styles
 
   // Animation
   opacity: 0;
-  -webkit-animation: scaleOut .5s $transition-timing-function both;
+    -webkit-animation: scaleOut .5s $transition-timing-function both;
   animation: scaleOut .5s $transition-timing-function both;
-  animation-delay: 1.7s;
+  animation-delay: 1.5s;
   @-webkit-keyframes scaleOut {
     0% { opacity: 0; transform: scale(0.9); }
     70% { transform: scale(1.05); }
@@ -568,12 +568,6 @@ General Landing styles
     @include media-phone-mn {
       font-size: 1.134rem; //18px
     }
-    @include media-phone-phablet {
-      max-width: 229px;
-    }
-    @include media-tablet-v-mn {
-      max-width: 229px;
-    }
   }
 
   .btn--icon {
@@ -594,6 +588,62 @@ General Landing styles
     }
   }
 }
+
+.content-right__content {
+  position: relative;
+
+  &.js-blur {
+    & * {
+      pointer-events: none;
+    }
+
+    // Animation
+    -webkit-animation: content-blur .1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    animation: content-blur .1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+
+    @-webkit-keyframes text-blur-out {
+      0% {
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+      }
+      100% {
+        -webkit-filter: blur(8px);
+        filter: blur(8px);
+      }
+    }
+    @keyframes content-blur {
+      0% {
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+      }
+      100% {
+        -webkit-filter: blur(3px);
+        filter: blur(3px);
+      }
+    }
+  }
+
+  /* Loader */
+  & + .loader-outer {
+    display: none;
+  }
+  &.js-blur + .loader-outer {
+    display: flex;
+  }
+  & + .loader-outer {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+}
+
+
+
 
 .content-bottom {
   background-color: $color-grey;

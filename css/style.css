@@ -363,23 +363,15 @@ fieldset {
     .form__group-half {
       width: calc(50% - 3px); } }
 
-.form__group-select .form__control {
-  background: url("../img/i-arrow-min.svg") 95% 50% no-repeat; }
+.form__group-select {
+  position: relative;
+  z-index: 2; }
+  .form__group-select .form__control {
+    background: url("../img/i-arrow-min.svg") 95% 50% no-repeat; }
 
-.form__label {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 400;
-  padding-left: 1rem;
-  transform: translateY(2.2rem);
-  transform-origin: left top;
-  cursor: text;
-  transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
-
-.form__group input,
 .form__control,
 textarea {
-  background: #fff;
+  background-color: #fff;
   border: 1px solid #dfdfdf;
   border-radius: var(--bdrs);
   box-sizing: border-box;
@@ -390,24 +382,31 @@ textarea {
   font-weight: 500;
   outline: none;
   padding: 1.55rem 1rem .45rem;
-  width: 100%; }
-  .form__group input:focus, .form__group input:not(:placeholder-shown),
-  .form__control:focus,
-  .form__control:not(:placeholder-shown),
-  textarea:focus,
-  textarea:not(:placeholder-shown) {
-    box-shadow: none;
-    outline: none; }
-  .form__group input:focus,
+  width: 100%;
+  transition: all 0.25s ease; }
   .form__control:focus,
   textarea:focus {
-    color: #000; }
+    border: 1px solid #bcbcbc;
+    color: #000;
+    outline: none; }
+  .form__control:focus + label, .form__control:not(:placeholder-shown) + label, .form__control:-webkit-autofill + label,
+  textarea:focus + label,
+  textarea:not(:placeholder-shown) + label,
+  textarea:-webkit-autofill + label {
+    color: #8e8e8e;
+    padding-left: 1.5rem;
+    transform: translateY(1.6rem) scale(0.7); }
 
-.form__control:focus ~ .form__label,
-.form__control:not(:placeholder-shown) ~ .form__label {
-  color: #8e8e8e;
-  padding-left: 1.5rem;
-  transform: translateY(1.6rem) scale(0.7); }
+.form__label {
+  cursor: text;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding-left: 1rem;
+  pointer-events: none;
+  transform: translateY(2.2rem);
+  transform-origin: left top;
+  transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
 
 /* Checkbox */
 .form__checkbox {
@@ -416,8 +415,33 @@ textarea {
   margin: 9px 0 0; }
 
 input[type="checkbox"] {
-  max-width: 20px;
-  margin: 0 10px 0 0; }
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 30px;
+  margin: 0 10px 0 1px;
+  max-width: 30px;
+  width: calc(100% - 2px);
+  position: relative;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
+
+input[type="checkbox"]:checked {
+  border: 1px solid #bcbcbc; }
+
+input[type="checkbox"]:checked:after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  width: 7px;
+  height: 12px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
 
 .form__checkbox span {
   color: #668496;
@@ -459,11 +483,13 @@ input[type="checkbox"] {
   z-index: 1;
   width: 100%; }
   .select-selected:focus {
+    border: 1px solid #d0d0d0;
     box-shadow: none;
     color: #000;
     outline: none; }
 
 .select-selected.select-arrow-active {
+  border: 1px solid #bcbcbc;
   border-radius: var(--bdrs) var(--bdrs) 0 0; }
 
 /* Style the arrow inside the select element: */
@@ -483,7 +509,7 @@ input[type="checkbox"] {
 /* Style items (options): */
 .select-items {
   background-color: #fff;
-  border: 1px solid #dfdfdf;
+  border: 1px solid #bcbcbc;
   border-radius: 0 0 var(--bdrs) var(--bdrs);
   box-sizing: border-box;
   max-height: 10rem;
@@ -597,3 +623,41 @@ button {
     .btn.btn--empty:hover,
     button.btn--empty:hover {
       color: #233b68; }
+
+.loader-outer {
+  opacity: 0;
+  -webkit-animation: fadeInloader 0.1s cubic-bezier(0.25, 0.45, 0.45, 0.95) both;
+  animation: fadeInloader 0.1s cubic-bezier(0.25, 0.45, 0.45, 0.95) both;
+  animation-delay: .15s; }
+@-webkit-keyframes fadeInloader {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeInloader {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.loader {
+  border: 6px solid #f1f1f1;
+  /* Light grey */
+  outline: 2px solid #fff;
+  border-top: 6px solid #129ff7;
+  border-radius: 50%;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1.15s linear infinite;
+  animation: spin 1.15s linear infinite;
+  animation-delay: .15s; }
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }

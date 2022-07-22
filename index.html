@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- CSS styles -->
-    <link rel="stylesheet" href="css/normalize.css" />
+<!--    <link rel="stylesheet" href="css/normalize.css" />-->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/p-index.css" />
 </head>
@@ -75,56 +75,61 @@
 
                 <div class="content-right">
                     <div class="i-phone"></div>
-                    <h2 class="content-right__title">Réservez votre <span class="nowrap">démo !</span></h2>
-                    <p class="content-right__txt">Un expert Mooncard répondra à toutes vos questions.</p>
-                    <form class="form" action="">
-                        <fieldset class="form__group-reverse">
-                            <input type="email" class="form__control" id="form-email" name="email" placeholder="">
-                            <label class="form__label" for="form-email">Email professionnel</label>
-                        </fieldset>
-                        <fieldset class="form__group-half-outer">
-                            <div class="form__group-reverse form__group-half">
-                                <input type="text" class="form__control" id="form-prenom" name="prenom" placeholder="">
-                                <label class="form__label" for="form-prenom">Prénom</label>
-                            </div>
-                            <div class="form__group-reverse form__group-half">
-                                <input type="text" class="form__control" id="form-nom" name="nom" placeholder="">
-                                <label class="form__label" for="form-nom">Nom</label>
-                            </div>
-                        </fieldset>
-                        <fieldset class="form__group-half-outer">
-                            <div class="form__group-reverse form__group-half">
-                                <input type="tel" class="form__control" id="form-phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="">
-                                <label class="form__label" for="form-phone">Téléphone mobile</label>
-                            </div>
-                            <div class="form__group-reverse form__group-half">
-                                <input type="text" class="form__control" id="form-societe" name="societe" placeholder="">
-                                <label class="form__label" for="form-societe">Société</label>
-                            </div>
-                        </fieldset>
+                    <div class="content-right__content" id="form-blur">
+                        <h2 class="content-right__title">Réservez votre <span class="nowrap">démo !</span></h2>
+                        <p class="content-right__txt">Un expert Mooncard répondra à toutes vos questions.</p>
+                        <form class="form">
+                            <fieldset class="form__group-reverse">
+                                <input type="email" class="form__control" id="form-email" name="email" placeholder=" ">
+                                <label class="form__label" for="form-email">Email professionnel</label>
+                            </fieldset>
+                            <fieldset class="form__group-half-outer">
+                                <div class="form__group-reverse form__group-half">
+                                    <input type="text" class="form__control" id="form-prenom" name="prenom" placeholder=" ">
+                                    <label class="form__label" for="form-prenom">Prénom</label>
+                                </div>
+                                <div class="form__group-reverse form__group-half">
+                                    <input type="text" class="form__control" id="form-nom" name="nom" placeholder=" ">
+                                    <label class="form__label" for="form-nom">Nom</label>
+                                </div>
+                            </fieldset>
+                            <fieldset class="form__group-half-outer">
+                                <div class="form__group-reverse form__group-half">
+                                    <input type="tel" class="form__control" id="form-phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder=" ">
+                                    <label class="form__label" for="form-phone">Téléphone mobile</label>
+                                </div>
+                                <div class="form__group-reverse form__group-half">
+                                    <input type="text" class="form__control" id="form-societe" name="societe" placeholder=" ">
+                                    <label class="form__label" for="form-societe">Société</label>
+                                </div>
+                            </fieldset>
 
-                        <fieldset class="form__group-select form__group-reverse custom-select">
-                            <select id="form-collaborateurs">
-                                <option>0 - 10</option>
-                                <option>0 - 50</option>
-                                <option>0 - 100</option>
-                                <option>0 - 500</option>
-                                <option>0 - 1000</option>
-                            </select>
-                            <label class="form__label" for="form-collaborateurs">Collaborateurs</label>
-                        </fieldset>
+                            <fieldset class="form__group-select form__group-reverse custom-select">
+                                <select id="form-collaborateurs">
+                                    <option>0 - 10</option>
+                                    <option>0 - 50</option>
+                                    <option>0 - 100</option>
+                                    <option>0 - 500</option>
+                                    <option>0 - 1000</option>
+                                </select>
+                                <label class="form__label" for="form-collaborateurs">Collaborateurs</label>
+                            </fieldset>
 
-                        <label class="form__checkbox" for="moon-checkbox">
-                            <input type="checkbox" id="moon-checkbox">
-                            <span>J'accepte de recevoir d'autres communications de Mooncard. Nous n'utiliserons vos données personnelles que pour prendre contact avec vous et vous envoyez des informations commerciales. Consultez notre <a href="">Politique de confidentialité</a> pour en savoir plus ainsi que nos <a href="">modalités de désabonnement</a>.*</span>
-                        </label>
+                            <label class="form__checkbox" for="moon-checkbox">
+                                <input type="checkbox" id="moon-checkbox">
+                                <span>J'accepte de recevoir d'autres communications de Mooncard. Nous n'utiliserons vos données personnelles que pour prendre contact avec vous et vous envoyez des informations commerciales. Consultez notre <a href="https://www.mooncard.co/fr/privacy-policy" target="_blank">Politique de confidentialité</a> pour en savoir plus ainsi que nos <a href="https://www.mooncard.co/fr/mentions-legales-conditions-utilisation" target="_blank">modalités de désabonnement</a>.*</span>
+                            </label>
 
-                        <div class="btn-outer">
-                            <input class="btn btn--primary" id="" type="button" value="Prendre rendez-vous">
-                        </div>
+                            <div class="btn-outer">
+                                <input class="btn btn--primary" id="form-button" type="button" value="Prendre rendez-vous" onclick="envoiEnCours(this)">
+                            </div>
 
-                        <a class="btn btn--empty btn--icon" href=""><span>&nbsp;</span> Offre réservée aux entreprises</a>
-                    </form>
+                            <a class="btn btn--empty btn--icon" href=""><span>&nbsp;</span> Offre réservée aux entreprises</a>
+                        </form>
+                    </div>
+                    <div class="loader-outer" id="formLoader">
+                        <div class="loader">&nbsp;</div>
+                    </div>
                 </div>
             </div>
 
@@ -310,5 +315,8 @@
 
 <!-- Custom Select -->
 <script defer src="js/custom_select.js"></script>
+
+<!-- Loader -->
+<script defer src="js/loader.js"></script>
 </body>
 </html>

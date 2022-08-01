@@ -4,5 +4,3 @@ function envoiEnCours() {
     element.classList.add("js-blur");
     setTimeout(function() {element.classList.remove("js-blur")}, 2000);
 }
-
-
